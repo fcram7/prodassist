@@ -1,0 +1,14 @@
+footer {
+  background-color: $color-1;
+
+  .footer-content {
+    justify-content: space-between;
+    align-items: center;
+    height: 2.75rem;
+    color: $color-2;
+
+    h3 {
+      font-weight: $font-medium;
+    }
+  }
+}

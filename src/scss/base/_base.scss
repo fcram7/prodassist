@@ -1,0 +1,71 @@
+@import './breakpoints';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//BREAKPOINTS
+.container {
+  margin-inline: auto;
+
+  // Start of breakpoint phone
+  @include media (">=xs", "<=sm") {
+    margin-inline: 1rem;
+  }
+
+  @include media (">sm", "<md") {
+    margin-inline: 1rem;
+  }
+  //End of breakpoint phone
+
+  //Start of breakpoint tablet
+  @include media (">=md", "<lg", "retina2x") {
+    margin-inline: 1.5rem;
+  }
+  //End of breakpoint tablet
+
+  //Start of breakpoint desktop
+  @include media (">=lg", "<xl") {
+    margin-inline: 2.5rem;
+  }
+
+  @include media (">=xl", "<2xl") {
+    margin-inline: 2.5rem;
+  }
+
+  @include media (">=2xl") {
+    margin-inline: 2.5rem;
+  }
+  //End of breakpoint desktop
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-2;
+  font-family: $font-family-chillax;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-title, .section-subtitle {
+  font-weight: $font-medium;
+}
+
+.section-title {
+  font-size: $h1-font-size;
+}
+
+.section-subtitle {
+  font-size: $h2-font-size;
+}
