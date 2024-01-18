@@ -1,0 +1,28 @@
+.feature-list-card {
+  min-width: 300px;
+  max-width: 450px;
+
+  .feature-list-card-logo, 
+  .feature-list-card-title, 
+  .feature-list-card-description {
+    color: $color-1;
+  }
+  
+  .feature-list-card-content {
+    min-height: 270px;
+    border: solid 1px $color-1;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .feature-list-card-title {
+      font-weight: $font-medium;
+      font-size: $bigger-font-size;
+    }
+
+    .feature-list-card-description {
+      font-size: calc($normal-font-size * 1.25);
+    }
+  }
+}

@@ -1,11 +1,11 @@
-import Home from "./pages/home/Index"
+import RouteHandler from "./RouteHandler";
 
 
 function App() {
 
   return (
     <>
-      <Home />
+      <RouteHandler />
     </>
   )
 }
