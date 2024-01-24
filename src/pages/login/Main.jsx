@@ -1,7 +1,9 @@
+import Login from "./Login";
+
 const Main = () => {
   return ( 
     <main>
-      LOGIN PAGE
+      <Login />
     </main>
    );
 }

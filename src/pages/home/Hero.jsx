@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 import HeroImg from "../../assets/hero-img.png";
+import Button from "../../components/Button";
 
 const Hero = () => {
   return ( 
@@ -8,8 +11,9 @@ const Hero = () => {
           <h2>
             Welcome to Prodassist! Your trusty assistant for productivity
           </h2>
-          <div className="try-now-button">
-            <a href="#">Try now</a>
+          <div className="try-now-button btn">
+            <Link to="login">Try now</Link>
+            <Button btnText="Try Now" btnClass="btn"/>
           </div>
         </div>
         <div className="hero-right">

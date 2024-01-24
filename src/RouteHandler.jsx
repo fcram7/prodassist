@@ -5,12 +5,10 @@ import Login from "./pages/login/Index";
 const RouteHandler = () => {
   return ( 
     <>
-
       <Routes>
         <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/login" element={<Login />}/>
+        <Route exact path="login" element={<Login />}/>
       </Routes>
-
     </>
    );
 }

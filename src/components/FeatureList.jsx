@@ -17,12 +17,12 @@ const FeatureList = () => {
   return ( 
     <div className="features-list flex">
       <FeatureCard 
-        icon={<FaListUl size={"2rem"}/>} 
+        icon={<FaListUl size={"2.5rem"}/>} 
         title={cardContent.toDoListTitle} 
         description={cardContent.toDoListDescription}
       />
       <FeatureCard 
-        icon={<TfiTimer size={"2rem"}/>}
+        icon={<TfiTimer size={"2.5rem"}/>}
         title={cardContent.pomodoroTitle}
         description={cardContent.pomodoroDescription}
       />
