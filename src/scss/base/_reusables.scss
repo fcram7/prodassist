@@ -10,21 +10,35 @@
   display: none;
 }
 
+.section {
+  padding-block: 8rem;
+}
+
 .btn {
   width: fit-content;
+  cursor: pointer;
+}
 
-  a, button {
-    padding: 0.75rem 1.25rem;
-    background-color: $color-1;
-    color: $color-2;
-    border-radius: 1rem;
-    transition: all 0.4s ease-in-out;
-    font-weight: $font-medium;
+a {
+  transition: all 0.4s ease-in-out;
+  
+  &:hover {
+    opacity: 0.6;
+  }
+}
 
-    &:hover {
-      background-color: $color-2;
-      color: $color-1;
-      border: solid 1px $color-1;
-    }
+button {
+  padding: 0.75rem 1.25rem;
+  background-color: $color-1;
+  color: $color-2;
+  border-radius: 1rem;
+  border: none;
+  transition: all 0.4s ease-in-out;
+  font-weight: $font-medium;
+
+  &:hover {
+    background-color: $color-2;
+    color: $color-1;
+    border: solid 1px $color-1;
   }
 }

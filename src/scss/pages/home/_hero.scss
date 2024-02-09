@@ -22,4 +22,12 @@
       width: 100%;
     }
   }
+
+  .try-now-button {
+    a {
+      color: $color-1;
+      font-weight: $font-medium;
+      font-size: $h3-font-size;
+    }
+  }
 }

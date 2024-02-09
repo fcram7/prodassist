@@ -1,26 +1,23 @@
-.login-section {
+.register-section {
   padding-block: 4rem;
   align-items: center;
   justify-content: center;
 
-  .login-section-content {
-    border: solid 0.25px $color-1;
+  .register-section-content {
+    border: solid 1px $color-1;
     border-radius: 1.5rem;
     padding: 3rem 2.25rem;
-    flex-direction: column;
     gap: 3rem;
 
-    .login-section-titles {
-      flex-direction: column;
+    .register-section-titles {
       align-items: center;
       gap: 2rem;
     }
 
-    .login-section-form {
+    .register-section-form {
       .form {
-        flex-direction: column;
         gap: 1rem;
-        
+
         .form-input {
           padding: 1rem;
           border-radius: 0.75rem;
@@ -28,11 +25,17 @@
       }
     }
 
-    .register-text {
+    .login-text {
       a {
         color: $color-1;
         text-decoration: underline;
       }
     }
   }
+}
+
+.register-section-content,
+.register-section-titles,
+.register-section-form .form {
+  flex-direction: column;
 }

@@ -1,0 +1,22 @@
+.dashboard-layout {
+  font-family: $font-family-satoshi;
+}
+
+.sidebar {
+  padding: 2rem 1.5rem;
+}
+
+.dashboard-sidebar-content {
+  border: solid 1px $color-1;
+  border-radius: 1rem;
+  padding: 1rem;
+  row-gap: 1rem;
+
+  .dashboard-sidebar-menu {
+    margin-top: 0.5rem;
+  }
+
+  .sidebar-title, .sidebar-subtitle {
+    font-weight: $font-regular;
+  }
+}

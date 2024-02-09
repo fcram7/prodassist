@@ -2,7 +2,7 @@ import FeatureList from "../../components/FeatureList";
 
 const Features = () => {
   return ( 
-    <section className="features-section container">
+    <section className="features-section section container">
       <div className="features-content flex">
         <div className="features-section-titles flex">
           <h1 className="features-title section-title">Features</h1>

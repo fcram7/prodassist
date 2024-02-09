@@ -1,11 +1,10 @@
-import Header from "../../components/Header";
-import Main from "./Main";
+import LoginInput from "./LoginInput";
 
 const Login = () => {
+  
   return ( 
     <>
-      <Header />
-      <Main />
+      <LoginInput />
     </>
    );
 }
