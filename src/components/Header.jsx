@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 
-const Header = ({ onLogout, loginText, logoutText }) => {
+const Header = ({ homeText, loginText }) => {
   return ( 
     <header>
       <nav className="navbar container flex">
@@ -10,13 +10,10 @@ const Header = ({ onLogout, loginText, logoutText }) => {
         <div className="header-menu">
           <ul className="menu-list flex">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">{homeText}</Link>
             </li>
             <li>
               <Link to="/login">{loginText}</Link>
-            </li>
-            <li>
-              <Link onClick={onLogout}>{logoutText}</Link>
             </li>
           </ul>
         </div>
@@ -26,10 +23,8 @@ const Header = ({ onLogout, loginText, logoutText }) => {
 }
 
 Header.propTypes = {
+  homeText: PropTypes.string,
   loginText: PropTypes.string,
-  logoutText: PropTypes.string,
-  onLogin: PropTypes.func,
-  onLogout: PropTypes.func
 }
  
 export default Header;
