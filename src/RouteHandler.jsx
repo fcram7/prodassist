@@ -6,8 +6,12 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+import { auth } from './utils/firebase';
+
 
 const RouteHandler = () => {
+  const user = auth.currentUser;
+
   return ( 
     <>
       <Header />
@@ -16,7 +20,9 @@ const RouteHandler = () => {
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/register" element={<Register/>} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
+          {user ?? (
+            <Route exact path="/dashboard" element={<Dashboard />} />
+          )}
         </Routes>
       </main>
       <Footer />

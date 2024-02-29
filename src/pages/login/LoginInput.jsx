@@ -23,6 +23,7 @@ const LoginInput = () => {
       return toast.success("Login successful")
     } catch (error) {
       console.log(error)
+      return toast.error(error)
     }
   };
 

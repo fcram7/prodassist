@@ -17,18 +17,25 @@ import Auth from '../../../network/auth';
 import toast from "react-hot-toast";
 import { useNavigate } from 'react-router-dom';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-
-import { getAuth } from 'firebase/auth';
+import { auth } from '../../../utils/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 
 const Sidebar = ({ selectedMenu, handleSelectedMenu }) => {
-  const auth = getAuth();
-  const user = auth.currentUser;
-  const userName = user.displayName;
+  const [authUser, setAuthUser] = useState(null);
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const [open, setOpen] = useState(true);
-  const navigate = useNavigate()
+  useEffect(() => {
+    const userAuthListener = onAuthStateChanged(auth, (user) => {
+      setAuthUser(user)
+    })
+
+    return () => userAuthListener()
+  }, [])
+
+  console.log(authUser);
 
   const handleUserMenu = () => {
     setOpen(!open);
@@ -51,7 +58,7 @@ const Sidebar = ({ selectedMenu, handleSelectedMenu }) => {
   return ( 
     <div className="dashboard-sidebar-content grid">
       <div className="dashboard-sidebar-title">
-        <h1 className="sidebar-title">Prodassist</h1>
+        <h1 className="sidebar-title">Dashboard</h1>
       </div>
 
       <div className="dashboard-sidebar-menu-wrapper">
@@ -87,7 +94,7 @@ const Sidebar = ({ selectedMenu, handleSelectedMenu }) => {
               <ListItemIcon>
                 <AccountCircleOutlinedIcon />
               </ListItemIcon>
-              <ListItemText primary={userName}/>
+              <ListItemText primary={authUser ? authUser.email : "Loading..."}/>
               {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
           </ListItem>
