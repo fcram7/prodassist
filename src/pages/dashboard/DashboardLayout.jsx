@@ -7,7 +7,7 @@ import Sidebar from "./components/Sidebar";
 import Pomodoro from './components/Pomodoro';
 
 const DashboardLayout = () => {
-  const [selectedMenu, setSelectedMenu] = useState(0)
+  const [selectedMenu, setSelectedMenu] = useState(0);
 
   const handleSelectedMenu = (e, index) => {
     setSelectedMenu(index)
