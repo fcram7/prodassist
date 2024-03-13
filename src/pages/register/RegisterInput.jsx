@@ -3,29 +3,13 @@ import Button from "../../components/Button";
 import useInput from "../../hooks/useInput";
 import Auth from "../../network/auth";
 import toast from "react-hot-toast";
-// import { useAuth } from '../../contexts/authContext';
 
 const RegisterInput = () => {
   const [name, onNameChangeHandler] = useInput("")
   const [email, onEmailChangeHandler] = useInput("")
   const [password, onPasswordChangeHandler] = useInput("")
   const [confirmPassword, onConfirmPasswordChangeHandler] = useInput("")
-  // const { register } = useAuth();
   const navigate = useNavigate();
-
-  // const newSubmitHandler = (e) => {
-  //   e.preventDefault()
-  //   if(password !== confirmPassword) {
-  //     return toast.error("Password didn't match")
-  //   }
-
-  //   try {
-  //     register(email, password)
-
-  //   } catch (error) {
-  //     console.error(error)
-  //   }
-  // }
 
   const onSubmitHandler = async (e) => {
     e.preventDefault()
