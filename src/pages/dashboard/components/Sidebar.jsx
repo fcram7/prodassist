@@ -35,8 +35,6 @@ const Sidebar = ({ selectedMenu, handleSelectedMenu }) => {
     return () => userAuthListener()
   }, [])
 
-  console.log(authUser);
-
   const handleUserMenu = () => {
     setOpen(!open);
   }
